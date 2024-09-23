@@ -25,7 +25,7 @@ def get_met(tease):
 
     proxies = {
     'http': f'http:zjgilliam:{tease}@proxy.divms.uiowa.edu:8888',
-    'https': f'https://zjgilliam:{tease}@proxy.divms.uiowa.edu:8888',
+    'https': f'http://zjgilliam:{tease}@proxy.divms.uiowa.edu:8888',
     }
 
 
@@ -79,7 +79,7 @@ def get_data(study_result_ids, tease):
 
     proxies = {
     'http': f'http:zjgilliam:{tease}@proxy.divms.uiowa.edu:8888',
-    'https': f'https://zjgilliam:{tease}@proxy.divms.uiowa.edu:8888',
+    'https': f'http://zjgilliam:{tease}@proxy.divms.uiowa.edu:8888',
     }
 
     headers = {

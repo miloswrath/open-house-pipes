@@ -59,7 +59,7 @@ def create_html_object(scores):
 def create_html(users):
     from func.update_html import update_html, generate_rows
 
-    update_html('./test.html', users)
+    update_html('./index.html', users)
 
 
     return None

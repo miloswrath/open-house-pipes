@@ -60,6 +60,7 @@ jobs:
   # Deployment job
   deploy:
     permissions:
+      id-token: write
       contents: write
       deployments: write
     environment:

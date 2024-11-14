@@ -22,7 +22,7 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run update script
-      run: python code/controller.py -t ${{ secrets.GITHUB_TOKEN }} -a {{ secrets.TEASE }}
+      run: python code/controller.py -t ${{ secrets.GITHUB_TOKEN }} -a sss
 
     - name: Commit and push changes
       run: |

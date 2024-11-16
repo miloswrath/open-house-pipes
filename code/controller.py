@@ -28,11 +28,17 @@ def compute(submission, scores, toke):
     from func.comput_metrics import compute
     from func.jatosppi import push
 
-    scores = compute(submission, scores)
-    print(scores)
+    new_scores = compute(submission, scores)
+    
+    # Ensure unique subject name
+    if 'sub_name' not in new_scores.columns or new_scores['sub_name'].isnull().any():
+        new_scores['sub_name'] = submission.get('sub_name', f"Participant_{len(scores) + 1}")
+    
+    print("New scores:\n", new_scores)
 
-    #push(toke)
-    print('done computing')
+    # Append new scores to the existing DataFrame
+    scores = pd.concat([scores, new_scores], ignore_index=True)
+    
     return scores
 
 def create_html_object(scores):

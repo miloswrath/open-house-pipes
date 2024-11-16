@@ -181,6 +181,9 @@ def convert_beh(txt_files):
 
             all_paths.append(csv_path)
 
+            #reset the dic
+            dic = {}
+
     return all_paths
 
 def move_txt(txt_files):
@@ -212,6 +215,8 @@ def move_txt(txt_files):
             shutil.rmtree(os.path.join(root, d))
     # Optionally, remove the raw directory itself
     os.rmdir('./data/raw')
+
+    dic = {}
 
     return None
 

@@ -26,7 +26,7 @@ def get_met(tease):
         'Content-Type': 'application/json',
     }
     data = {
-        'studyIds': [999]
+        'studyIds': [1012]
     }
 
     response = requests.post(url, headers=headers, json=data, #proxies=proxies
@@ -78,7 +78,8 @@ def get_data(study_result_ids, tease):
     }
     # Get the data for each study result
     datas = {
-        'studyIds': [999],
+        'studyIds': [1012],
+
         'studyResultIds': study_result_ids
     }
 
